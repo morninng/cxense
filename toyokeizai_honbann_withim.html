@@ -30,7 +30,8 @@ window.AoneToCxense = function(aone_segments_arr){
 
 var cX = cX || {}; cX.callQueue = cX.callQueue || [];
 cX.callQueue.push(['setSiteId', '9222314110606567876']);
- var queryDict = TKOLIB.getQueryData();
+var queryDict = [];
+try{ queryDict = TKOLIB.getQueryData(); } catch(err){};
 var cParams = {};
 var CPARAM = ['utm_source','utm_medium','utm_term','utm_content','utm_campaign'];
 for (i=0;i<CPARAM.length;i++) {
